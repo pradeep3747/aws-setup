@@ -1,3 +1,3 @@
 output "instance_ips" {
-  value = [for i in aws_instance.vm : i.public_ip]
+  value = [for i in aws_instance.os-system : i.public_ip]
 }
