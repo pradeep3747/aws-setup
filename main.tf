@@ -50,7 +50,7 @@ resource "aws_security_group" "ssh" {
   }
 }
 
-resource "aws_instance" "vm" {
+resource "aws_instance" "os-system" {
   count         = 4
   ami           = var.ami_id
   instance_type = "t2.micro"
