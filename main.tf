@@ -51,7 +51,7 @@ resource "aws_security_group" "ssh" {
 }
 
 resource "aws_instance" "vm" {
-  count         = 5
+  count         = 4
   ami           = var.ami_id
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.public.id
