@@ -55,7 +55,7 @@ resource "aws_instance" "os-system" {
   ami           = var.ami_id
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.public.id
-  security_groups = [aws_security_group.ssh.name]
+  security_groups = [aws_security_group.ssh.id]
   tags = {
     Name = "FreeTier-VM-${count.index + 1}"
   }
